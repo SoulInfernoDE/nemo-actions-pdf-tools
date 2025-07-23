@@ -1,4 +1,4 @@
-# nemo-actions-pdf-unprotect
+# nemo-actions-pdf-unprotect (deprecated - will not going to work on this project anymore due to other projects and real life workload)
 
 integrate permanent password removal of pdf-files into the right click nemo file manager
 actions menu after entering the password of the pdf file once
