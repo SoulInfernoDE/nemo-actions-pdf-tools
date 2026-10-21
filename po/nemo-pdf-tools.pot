@@ -1,0 +1,1027 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the nemo-pdf-tools package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: nemo-pdf-tools\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-21 20:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: extension/nemo-pdf-tools.py:52
+msgid "Compress, merge, split and convert PDF files from the context menu"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:68
+msgid "PDF files"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:79
+msgid "Combine the images into one PDF file"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:79
+msgid "Create PDF from images…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:83
+msgid "Combine the PDF files and images into one PDF file"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:83
+msgid "Merge into one PDF…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:87 nemo_pdf_tools/merge_window.py:156
+msgid "Compress…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:87
+msgid "Make the files smaller without touching text and fonts"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:90
+msgid "Combine the files into one PDF in a chosen order"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:90
+msgid "Merge…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:92
+msgid "Save pages or page ranges as separate files"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:92
+msgid "Split or extract pages…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:95
+msgid "Rotate"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:99
+msgid "90° clockwise"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:100
+msgid "90° counter-clockwise"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:101
+msgid "180°"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:104
+msgid "Rotates all pages in place, without any quality loss"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:109
+msgid "Export as images…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:109
+msgid "Save pages as PNG or JPEG, or extract the embedded images"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:112
+msgid "Protect with password…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:112
+msgid "Save an encrypted copy that needs a password to open"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:114
+msgid "Remove password…"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:114
+msgid "Save a copy without password protection"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:118
+msgid "Edit pages in PDF Arranger"
+msgstr ""
+
+#: extension/nemo-pdf-tools.py:118
+msgid "Reorder, rotate or delete single pages"
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:76
+#, python-brace-format
+msgid "Automatic update check: {state}"
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:76
+msgid "off"
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:76
+msgid "on"
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:81
+#, python-brace-format
+msgid "The update check failed: {error}"
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:84
+#, python-brace-format
+msgid "{name} {version} is up to date."
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:86
+#, python-brace-format
+msgid "Installing version {version}…"
+msgstr ""
+
+#: nemo_pdf_tools/cli.py:110
+msgid "PDF Arranger is not installed."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:38
+msgid "Lossless"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:38
+msgid ""
+"Only lossless optimisation: identical content, no image is changed visibly."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:39
+msgid "High quality"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:39
+msgid ""
+"Images above 300 dpi are reduced, JPEG quality 88. Suitable for printing."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:40
+msgid "Balanced"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:40
+msgid ""
+"Images above 200 dpi are reduced, JPEG quality 78. Good for screen and "
+"office printing."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:41
+msgid ""
+"Images above 144 dpi are reduced, JPEG quality 62. Good for screen and e-"
+"mail."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:41
+msgid "Strong"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:42
+msgid ""
+"Images above 96 dpi are reduced, JPEG quality 45. Smallest files, visible "
+"losses."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:42
+msgid "Maximum"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:48
+msgid "Visually lossless"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:50
+msgid "Very good"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:52
+msgid "Good"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:54
+msgid "Acceptable"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:55
+msgid "Visible artefacts"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:60
+msgid "print quality"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:62
+msgid "good for printing"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:64
+msgid "screen and office printing"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:66
+msgid "screen viewing"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:67
+msgid "low, fine details get lost"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:84
+msgid "Drag to compare the original (left) with the result (right)."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:130
+msgid "Original"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:130
+msgid "Result"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:155
+msgid "Compress PDF files"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:183 nemo_pdf_tools/compress_window.py:498
+msgid "Analysing…"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:185 nemo_pdf_tools/merge_window.py:73
+msgid "File"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:185 nemo_pdf_tools/dialogs.py:272
+#: nemo_pdf_tools/merge_window.py:78
+msgid "Pages"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:185
+msgid "Size"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:186
+msgid "Estimated"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:186
+msgid "Status"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:209
+msgid "Compression level"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:229
+msgid "Strength"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:243
+msgid "Advanced settings"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:250
+msgid "Reduce images above"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:252
+msgid "dpi"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:253
+msgid "JPEG quality"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:257
+msgid "Store colour images without colour as grayscale"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:258
+msgid "Remove page thumbnails and private editor data"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:259
+msgid "Remove document properties (title, author, …)"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:260
+msgid "Optimise for fast web view"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:261
+msgid "Check every changed page visually afterwards"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:269
+msgid ""
+"Renders original and result and compares them. Images that would change a "
+"page visibly are left untouched."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:274
+msgid "Expected result"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:284
+msgid "File size"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:285
+msgid "Image quality"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:286 nemo_pdf_tools/dialogs.py:270
+msgid "Resolution"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:287
+msgid "Images"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:302
+msgid ""
+"Text, fonts and vector graphics are never changed, so letters cannot go "
+"missing. Only images are optimised."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:309
+msgid "Preview"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:313
+msgid "Zoom level of the preview, like in a PDF viewer"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:328
+msgid "Save"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:329
+msgid "Next to the original"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:330
+msgid "In folder:"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:331 nemo_pdf_tools/dialogs.py:77
+#: nemo_pdf_tools/merge_window.py:144
+msgid "Choose target folder"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:334
+msgid "Replace original"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:335
+msgid "The original is moved to the trash, so it can be restored."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:344 nemo_pdf_tools/dialogs.py:57
+#: nemo_pdf_tools/merge_window.py:155
+msgid "Show in folder"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:347 nemo_pdf_tools/dialogs.py:65
+#: nemo_pdf_tools/merge_window.py:173 nemo_pdf_tools/merge_window.py:248
+msgid "_Cancel"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:349
+msgid "_Compress"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:440
+msgid "Lossless: only the file structure and the image encoding are optimised."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:443
+#, python-brace-format
+msgid ""
+"Images above {dpi} dpi are reduced to {dpi} dpi, photos are stored as JPEG "
+"with quality {q}."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:523
+msgid "No image in this file changes visibly at this level."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:525
+msgid "This file contains no images. Only its structure is optimised."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:532
+#, python-brace-format
+msgid "Page {n}"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:534
+#, python-brace-format
+msgid "{a} → {b} dpi"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:535
+msgid "most detailed area of the largest image"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:542
+msgid "Calculating…"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:547
+#, python-brace-format
+msgid "{old} → ≈ {new} (−{pct} %)"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:550
+#, python-brace-format
+msgid "{old} → no noticeable saving"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:552
+msgid "still analysing"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:559
+msgid "Lossless, identical content"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:564
+#, python-brace-format
+msgid "{label} (SSIM {value})"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:568
+msgid "Unchanged, no photo is re-encoded"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:574
+#, python-brace-format
+msgid "at least {dpi} dpi, {label}"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:577
+msgid "unchanged"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:583
+#, python-brace-format
+msgid "{n} image"
+msgid_plural "{n} images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/compress_window.py:585
+#, python-brace-format
+msgid "{n} optimised"
+msgid_plural "{n} optimised"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/compress_window.py:587
+#, python-brace-format
+msgid "{n} reduced in resolution"
+msgid_plural "{n} reduced in resolution"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/compress_window.py:589
+#, python-brace-format
+msgid "{n} turned into grayscale"
+msgid_plural "{n} turned into grayscale"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/compress_window.py:591
+msgid "estimated from a sample"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:597
+msgid "A digital signature will become invalid."
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:599
+msgid "PDF/A files keep their metadata; check archival conformance afterwards."
+msgstr ""
+
+#. TRANSLATORS: appended to the file name of compressed copies
+#: nemo_pdf_tools/compress_window.py:607
+msgid "_compressed"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:647
+#, python-brace-format
+msgid "Saved: {size} (−{pct} %)"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:650
+msgid "lossless only, images could not be changed safely"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:652
+#, python-brace-format
+msgid "{n} image kept as it was"
+msgid_plural "{n} images kept as they were"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/compress_window.py:655
+msgid "Already optimal, no file written"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:657 nemo_pdf_tools/compress_window.py:662
+msgid "Cancelled"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:669
+msgid "Optimising images"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:669
+msgid "Preparing"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:669
+msgid "Saving"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:670
+msgid "Checking pages"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:673
+#, python-brace-format
+msgid "{name} ({n} of {count})"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:682
+#, python-brace-format
+msgid "Done: {old} → {new}"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:685
+msgid "PDF files compressed"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:685
+#, python-brace-format
+msgid "{old} → {new}"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:688
+msgid "Done, no file was written"
+msgstr ""
+
+#: nemo_pdf_tools/compress_window.py:689 nemo_pdf_tools/dialogs.py:130
+#: nemo_pdf_tools/merge_window.py:330 nemo_pdf_tools/ui_common.py:294
+msgid "_Close"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:29 nemo_pdf_tools/merge_window.py:226
+#, python-brace-format
+msgid "{n} file"
+msgid_plural "{n} files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/dialogs.py:76
+msgid "Save in"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:84
+msgid "Create a subfolder for each file"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:127 nemo_pdf_tools/dialogs.py:455
+msgid "Some files could not be processed."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:135
+#, python-brace-format
+msgid "{n} file written"
+msgid_plural "{n} files written"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/dialogs.py:154
+msgid "Split PDF"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:154
+msgid "_Split"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:156
+msgid "Split into"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:158
+msgid "single pages"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:159
+msgid "parts of"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:162
+msgid "page ranges:"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:163
+msgid "e.g. 1-3; 4-10; 11-"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:164
+msgid "chapters (top-level bookmarks)"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:168
+msgid "pages each"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:173
+msgid ""
+"Separate the files with “;”. Within one file, “1-3, 7” takes pages 1 to 3 "
+"and 7. To extract pages, enter a single range."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:197
+msgid "The file has no bookmarks."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:227 nemo_pdf_tools/merge_window.py:236
+#: nemo_pdf_tools/ui_common.py:78
+#, python-brace-format
+msgid "Invalid page range: {value}"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:232
+msgid "One file per chapter."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:234
+#, python-brace-format
+msgid "Creates {n} file."
+msgid_plural "Creates {n} files."
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/dialogs.py:251
+msgid "Export as images"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:251
+msgid "_Export"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:253
+msgid "Save pages as images"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:255
+msgid "Extract embedded images in their original quality"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:259
+msgid "PNG (lossless)"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:260
+msgid "JPEG (smaller)"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:263
+msgid "150 dpi"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:263
+msgid "300 dpi (print)"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:263
+msgid "72 dpi (screen)"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:264
+msgid "600 dpi"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:267
+msgid "all pages"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:268
+msgid "Format"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:305
+#, python-brace-format
+msgid "{n} image saved"
+msgid_plural "{n} images saved"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/dialogs.py:312
+msgid "Protect PDF with password"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:312
+msgid "_Protect"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:318
+msgid "Password"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:320
+msgid "Repeat"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:322 nemo_pdf_tools/dialogs.py:388
+msgid "_Show password"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:327
+msgid "Allow after opening"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:329
+msgid "Copying text and images"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:329
+msgid "Printing"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:330
+msgid "Editing, comments and form filling"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:334
+msgid ""
+"Encrypted with AES-256. A protected copy is saved; the original stays as it "
+"is."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:340
+msgid "Please enter a password."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:343
+msgid "The passwords do not match."
+msgstr ""
+
+#. TRANSLATORS: appended to the file name of password protected copies
+#: nemo_pdf_tools/dialogs.py:349
+msgid "_protected"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:367
+msgid "_Skip"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:368
+msgid "_Remove password"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:377
+msgid "Wrong password. Please try again."
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:381
+msgid "Password for:"
+msgstr ""
+
+#. TRANSLATORS: appended to the file name of unprotected copies
+#: nemo_pdf_tools/dialogs.py:436
+msgid "_unprotected"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:445 nemo_pdf_tools/dialogs.py:447
+msgid "Password removed"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:445
+#, python-brace-format
+msgid "Saved as “{name}”"
+msgstr ""
+
+#: nemo_pdf_tools/dialogs.py:447
+#, python-brace-format
+msgid "{count} unprotected copy saved"
+msgid_plural "{count} unprotected copies saved"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/dialogs.py:452
+msgid "This file is not password protected:"
+msgid_plural "These files are not password protected:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/dialogs.py:469
+msgid "Some files could not be rotated."
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:43
+msgid "Create PDF from images"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:43
+msgid "Merge PDF files"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:54 nemo_pdf_tools/merge_window.py:298
+msgid "merged"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:63
+msgid ""
+"Drag the rows into the right order. Page ranges like “1-3, 5, 8-” take only "
+"those pages; empty means all pages."
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:76
+msgid "all"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:81
+msgid "of"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:97
+msgid "Add files…"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:98
+msgid "Remove selected"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:99
+msgid "Move up"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:100
+msgid "Move down"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:103
+msgid "Sort"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:105
+msgid "Name A–Z"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:105
+msgid "Name Z–A"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:106
+msgid "Newest first"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:106
+msgid "Oldest first"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:123
+msgid "Options"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:126
+msgid "Add a bookmark for every file"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:127
+msgid "Keep the bookmarks of the files"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:128
+msgid ""
+"Insert a blank page after files with an odd page count (double-sided "
+"printing)"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:129
+msgid "Place images on A4 pages"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:140
+msgid "Save as"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:143
+msgid "in"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:154
+msgid "Open"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:162
+msgid "Edit single pages in PDF Arranger…"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:163
+msgid ""
+"Opens the files in this order in PDF Arranger, where single pages can be "
+"moved, rotated or deleted."
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:170
+msgid "Create _PDF"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:170
+msgid "_Merge"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:227
+#, python-brace-format
+msgid "{n} page"
+msgid_plural "{n} pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: nemo_pdf_tools/merge_window.py:237
+#, python-brace-format
+msgid "Use page numbers from 1 to {n}, for example “1-3, 5, 8-”."
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:247
+msgid "Add files"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:248
+msgid "_Add"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:254
+msgid "PDF files and images"
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:327
+#, python-brace-format
+msgid "Saved as “{name}” ({size})."
+msgstr ""
+
+#: nemo_pdf_tools/merge_window.py:336
+msgid "The files could not be merged."
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:68
+msgid "The PDF is password protected. Remove the password first."
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:70
+msgid "The file is damaged or not a PDF."
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:72
+msgid "The PDF is digitally signed; changing it would break the signature."
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:74
+msgid "The result did not pass the visual check, so nothing was written."
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:243
+msgid "Update now"
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:244
+msgid "Later"
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:261
+#, python-brace-format
+msgid "A new version of the PDF tools is available: {version}"
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:274
+msgid "Updating…"
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:290
+#, python-brace-format
+msgid "The update failed: {error}"
+msgstr ""
+
+#: nemo_pdf_tools/ui_common.py:292
+#, python-brace-format
+msgid ""
+"Updated to {version}. Tools use it from the next start; the menu after "
+"restarting Nemo."
+msgstr ""

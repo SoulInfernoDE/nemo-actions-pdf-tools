@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+"""Launcher for the PDF tools.
+
+Uses the system Python on purpose (not whatever "python3" is first in PATH),
+because pikepdf and the GTK bindings come from distribution packages.
+"""
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from nemo_pdf_tools.cli import main  # noqa: E402
+
+sys.exit(main())
