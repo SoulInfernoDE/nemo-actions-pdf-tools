@@ -1,0 +1,75 @@
+# German translation for pdf-password-remover.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pdf-password-remover\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-21 19:47+0200\n"
+"PO-Revision-Date: 2026-10-21 19:47+0200\n"
+"Last-Translator: Soul Inferno DE\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: pdf-password-remover.py:70
+msgid "_Skip"
+msgstr "Ü_berspringen"
+
+#: pdf-password-remover.py:71
+msgid "_Remove password"
+msgstr "Passwort _entfernen"
+
+#: pdf-password-remover.py:82
+msgid "Wrong password. Please try again."
+msgstr "Falsches Passwort. Bitte erneut versuchen."
+
+#: pdf-password-remover.py:88
+msgid "Password for:"
+msgstr "Passwort für:"
+
+#: pdf-password-remover.py:98
+msgid "_Show password"
+msgstr "Passwort _anzeigen"
+
+#: pdf-password-remover.py:185
+msgid "The Python library pikepdf is missing."
+msgstr "Die Python-Bibliothek pikepdf fehlt."
+
+#: pdf-password-remover.py:186
+msgid "Install it with:"
+msgstr "Installieren mit:"
+
+#: pdf-password-remover.py:212 pdf-password-remover.py:215
+msgid "Password removed"
+msgstr "Passwort entfernt"
+
+#: pdf-password-remover.py:212
+#, python-brace-format
+msgid "Saved as “{name}”"
+msgstr "Gespeichert als „{name}“"
+
+#: pdf-password-remover.py:217
+#, python-brace-format
+msgid "{count} unprotected copy saved"
+msgid_plural "{count} unprotected copies saved"
+msgstr[0] "{count} ungeschützte Kopie gespeichert"
+msgstr[1] "{count} ungeschützte Kopien gespeichert"
+
+#: pdf-password-remover.py:223
+msgid "These files are not password protected:"
+msgstr "Diese Dateien sind nicht passwortgeschützt:"
+
+#: pdf-password-remover.py:227
+msgid "The password could not be removed from these files:"
+msgstr "Bei diesen Dateien konnte das Passwort nicht entfernt werden:"
+
+#: pdf-password-remover.nemo_action.in:3
+msgid "Remove PDF password"
+msgstr "PDF-Passwort entfernen"
+
+#: pdf-password-remover.nemo_action.in:4
+msgid "Save a copy of the selected PDF files without password"
+msgstr "Eine Kopie der ausgewählten PDF-Dateien ohne Passwort speichern"
