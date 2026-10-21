@@ -147,7 +147,7 @@ Then restart Nemo once:
 nemo -q
 ```
 
-Everything is installed for the current user only: the program to `~/.local/share/nemo-pdf-tools/`, the menu extension to `~/.local/share/nemo-python/extensions/`, translations to `~/.local/share/locale/`, and the `pdf-tools` command to `~/.local/bin/`. A previously installed standalone *Remove PDF password* action is replaced.
+Everything is installed for the current user only: the program to `~/.local/share/nemo-pdf-tools/`, the menu extension to `~/.local/share/nemo-python/extensions/`, translations to `~/.local/share/locale/`, the `pdf-tools` command to `~/.local/bin/`, and its tab completion to `~/.local/share/bash-completion/completions/`. A previously installed standalone *Remove PDF password* action is replaced.
 
 To remove it:
 
@@ -157,7 +157,7 @@ To remove it:
 
 ## Command line
 
-The menu entries call `pdf-tools COMMAND --gui FILES`. Without `--gui`, some commands also work in a terminal:
+The menu entries call `pdf-tools COMMAND --gui FILES`. Without `--gui`, some commands also work in a terminal. Commands, options and matching files complete with the Tab key (in a new terminal after installing):
 
 ```bash
 pdf-tools compress --strength 50 scan.pdf

@@ -147,7 +147,7 @@ Danach Nemo einmal neu starten:
 nemo -q
 ```
 
-Alles wird nur für den aktuellen Benutzer installiert: das Programm nach `~/.local/share/nemo-pdf-tools/`, die Menü-Erweiterung nach `~/.local/share/nemo-python/extensions/`, die Übersetzungen nach `~/.local/share/locale/` und der Befehl `pdf-tools` nach `~/.local/bin/`. Eine vorher installierte, eigenständige Aktion *PDF-Passwort entfernen* wird ersetzt.
+Alles wird nur für den aktuellen Benutzer installiert: das Programm nach `~/.local/share/nemo-pdf-tools/`, die Menü-Erweiterung nach `~/.local/share/nemo-python/extensions/`, die Übersetzungen nach `~/.local/share/locale/` der Befehl `pdf-tools` nach `~/.local/bin/` und seine Tab-Vervollständigung nach `~/.local/share/bash-completion/completions/`. Eine vorher installierte, eigenständige Aktion *PDF-Passwort entfernen* wird ersetzt.
 
 Zum Entfernen:
 
@@ -157,7 +157,7 @@ Zum Entfernen:
 
 ## Kommandozeile
 
-Die Menüeinträge rufen `pdf-tools BEFEHL --gui DATEIEN` auf. Ohne `--gui` funktionieren einige Befehle auch im Terminal:
+Die Menüeinträge rufen `pdf-tools BEFEHL --gui DATEIEN` auf. Ohne `--gui` funktionieren einige Befehle auch im Terminal. Befehle, Optionen und passende Dateien lassen sich mit der Tab-Taste vervollständigen (nach der Installation in einem neuen Terminal):
 
 ```bash
 pdf-tools compress --strength 50 scan.pdf

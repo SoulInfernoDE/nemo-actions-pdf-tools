@@ -9,15 +9,17 @@ APP_DIR=$DATA_HOME/$NAME
 EXT_DIR=$DATA_HOME/nemo-python/extensions
 LOCALES=$DATA_HOME/locale
 BIN_DIR=$HOME/.local/bin
+COMPLETIONS=${BASH_COMPLETION_USER_DIR:-$DATA_HOME/bash-completion}/completions
 
 # Files of the former standalone "Remove PDF password" action, which is now
 # part of this suite.
 OLD_ACTIONS=("$DATA_HOME/nemo/actions/pdf-password-remover.nemo_action" "$DATA_HOME/nemo/actions/pdf-password-remover.py")
 
 do_uninstall() {
-    rm -rf "$APP_DIR"
+    rm -rf "${APP_DIR:?}"
     rm -f "$EXT_DIR/$NAME.py"
     rm -f "$LOCALES"/*/LC_MESSAGES/"$NAME".mo
+    rm -f "$COMPLETIONS/pdf-tools"
     if [ -L "$BIN_DIR/pdf-tools" ]; then
         rm -f "$BIN_DIR/pdf-tools"
     fi
@@ -26,7 +28,7 @@ do_uninstall() {
 
 do_install() {
     mkdir -p "$APP_DIR" "$EXT_DIR"
-    rm -rf "$APP_DIR/nemo_pdf_tools"
+    rm -rf "${APP_DIR:?}/nemo_pdf_tools"
     cp -r "$SRC/nemo_pdf_tools" "$APP_DIR/"
     find "$APP_DIR" -name __pycache__ -type d -prune -exec rm -rf {} +
     install -m 755 "$SRC/pdf-tools" "$APP_DIR/pdf-tools"
@@ -46,6 +48,8 @@ do_install() {
     if [ ! -e "$BIN_DIR/pdf-tools" ] || [ -L "$BIN_DIR/pdf-tools" ]; then
         ln -sf "$APP_DIR/pdf-tools" "$BIN_DIR/pdf-tools"
     fi
+    mkdir -p "$COMPLETIONS"
+    install -m 644 "$SRC/completion/pdf-tools.bash" "$COMPLETIONS/pdf-tools"
 
     for old in "${OLD_ACTIONS[@]}"; do
         if [ -e "$old" ]; then
