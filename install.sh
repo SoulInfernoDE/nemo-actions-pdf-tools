@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Install (or with --uninstall remove) the PDF tools for the current user.
+# Missing system packages are installed with apt first (asks for the sudo
+# password); --no-deps skips that step.
 set -euo pipefail
 
 NAME=nemo-pdf-tools
@@ -11,9 +13,62 @@ LOCALES=$DATA_HOME/locale
 BIN_DIR=$HOME/.local/bin
 COMPLETIONS=${BASH_COMPLETION_USER_DIR:-$DATA_HOME/bash-completion}/completions
 
+# System packages the tools need (names on Debian, Ubuntu and Linux Mint).
+PACKAGES=(
+    nemo-python          # the "PDF files" submenu
+    python3-gi gir1.2-gtk-3.0 python3-gi-cairo python3-cairo
+    gir1.2-poppler-0.18  # previews, visual check, page export
+    python3-pikepdf      # PDF handling
+    python3-pil python3-numpy
+    python3-img2pdf      # images to PDF
+    gettext              # builds the translations
+    libnotify-bin        # notifications
+)
+
 # Files of the former standalone "Remove PDF password" action, which is now
 # part of this suite.
 OLD_ACTIONS=("$DATA_HOME/nemo/actions/pdf-password-remover.nemo_action" "$DATA_HOME/nemo/actions/pdf-password-remover.py")
+
+missing_packages() {
+    local p
+    for p in "${PACKAGES[@]}"; do
+        dpkg-query -W -f='${Status}' "$p" 2>/dev/null | grep -q "ok installed" || echo "$p"
+    done
+}
+
+install_dependencies() {
+    if ! command -v dpkg-query >/dev/null || ! command -v apt-get >/dev/null; then
+        echo "No apt found: please install the equivalents of: ${PACKAGES[*]}" >&2
+        return
+    fi
+    local missing
+    mapfile -t missing < <(missing_packages)
+    [ ${#missing[@]} -gt 0 ] || return 0
+    echo "Installing missing packages: ${missing[*]}"
+    local sudo=()
+    [ "$(id -u)" -eq 0 ] || sudo=(sudo)
+    if ! "${sudo[@]}" apt-get install -y "${missing[@]}"; then
+        # Package lists can be outdated on a fresh system.
+        "${sudo[@]}" apt-get update && "${sudo[@]}" apt-get install -y "${missing[@]}" || {
+            echo "Could not install: ${missing[*]}" >&2
+            echo "Install them with: sudo apt install ${missing[*]}" >&2
+        }
+    fi
+}
+
+check_runtime() {
+    # Final check that also covers systems without apt.
+    local problems=()
+    /usr/bin/python3 -c 'import pikepdf' 2>/dev/null || problems+=(pikepdf)
+    /usr/bin/python3 -c 'import img2pdf' 2>/dev/null || problems+=(img2pdf)
+    /usr/bin/python3 -c 'import numpy, PIL' 2>/dev/null || problems+=("numpy/Pillow")
+    /usr/bin/python3 -c 'import gi, cairo; gi.require_version("Gtk", "3.0"); gi.require_version("Poppler", "0.18")' \
+        2>/dev/null || problems+=("GTK 3/Poppler/cairo bindings")
+    [ -d /usr/share/nemo-python ] || problems+=(nemo-python)
+    if [ ${#problems[@]} -gt 0 ]; then
+        echo "Warning: still missing: ${problems[*]}. The tools will not work until they are installed." >&2
+    fi
+}
 
 do_uninstall() {
     rm -rf "${APP_DIR:?}"
@@ -27,6 +82,11 @@ do_uninstall() {
 }
 
 do_install() {
+    local with_deps=$1
+    if [ "$with_deps" = yes ]; then
+        install_dependencies
+    fi
+
     mkdir -p "$APP_DIR" "$EXT_DIR"
     rm -rf "${APP_DIR:?}/nemo_pdf_tools"
     cp -r "$SRC/nemo_pdf_tools" "$APP_DIR/"
@@ -58,21 +118,14 @@ do_install() {
         fi
     done
 
-    missing=()
-    /usr/bin/python3 -c 'import pikepdf' 2>/dev/null || missing+=(python3-pikepdf)
-    /usr/bin/python3 -c 'import img2pdf' 2>/dev/null || missing+=(python3-img2pdf)
-    /usr/bin/python3 -c 'import numpy, PIL' 2>/dev/null || missing+=(python3-numpy python3-pil)
-    /usr/bin/python3 -c 'import gi; gi.require_version("Poppler", "0.18")' 2>/dev/null || missing+=(gir1.2-poppler-0.18)
-    [ -d /usr/share/nemo-python ] || missing+=(nemo-python)
-    if [ ${#missing[@]} -gt 0 ]; then
-        echo "Note: missing packages. Install them with: sudo apt install ${missing[*]}" >&2
-    fi
+    check_runtime
     echo "Installed $NAME to $APP_DIR."
     echo "Restart Nemo once (nemo -q, then open it again) to see the \"PDF files\" menu."
 }
 
 case "${1:-}" in
     --uninstall) do_uninstall ;;
-    "") do_install ;;
-    *) echo "Usage: $0 [--uninstall]" >&2; exit 2 ;;
+    --no-deps) do_install no ;;
+    "") do_install yes ;;
+    *) echo "Usage: $0 [--no-deps | --uninstall]" >&2; exit 2 ;;
 esac

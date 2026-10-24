@@ -117,35 +117,24 @@ pdf-tools update --auto off
 
 The first command checks and installs right away; the second turns the automatic check off (`--auto on` turns it back on).
 
-## Requirements
+## Installation
 
-Preinstalled on Linux Mint 22:
+One line installs everything, including the system packages that are still missing (it asks for your password once), and closes Nemo so that it shows the new menu when opened again:
+
+```bash
+sudo apt install -y git && git clone https://github.com/SoulInfernoDE/nemo-actions-pdf-tools.git && cd nemo-actions-pdf-tools && ./install.sh && nemo -q
+```
+
+`install.sh` checks these packages and installs the missing ones with apt; most are preinstalled on Linux Mint 22:
 
 - `nemo-python` (the submenu)
 - `python3-pikepdf` (PDF handling, based on qpdf)
 - `python3-pil`, `python3-numpy` (image processing)
 - `python3-img2pdf` (images to PDF)
-- `gir1.2-poppler-0.18` (previews, visual check, page export)
-- `python3-gi` with GTK 3
-- `gettext` (only needed by the installer to build the translations)
+- `gir1.2-poppler-0.18`, `python3-gi`, `python3-gi-cairo`, `python3-cairo`, `gir1.2-gtk-3.0` (windows, previews, visual check, page export)
+- `gettext` (builds the translations), `libnotify-bin` (notifications)
 
-The installer names any missing package.
-
-## Installation
-
-```bash
-git clone https://github.com/SoulInfernoDE/nemo-actions-pdf-tools.git
-```
-
-```bash
-cd nemo-actions-pdf-tools && ./install.sh
-```
-
-Then restart Nemo once:
-
-```bash
-nemo -q
-```
+Without apt (other distributions), install the equivalents yourself and run `./install.sh --no-deps`; the installer then only reports what is still missing.
 
 Everything is installed for the current user only: the program to `~/.local/share/nemo-pdf-tools/`, the menu extension to `~/.local/share/nemo-python/extensions/`, translations to `~/.local/share/locale/`, the `pdf-tools` command to `~/.local/bin/`, and its tab completion to `~/.local/share/bash-completion/completions/`. A previously installed standalone *Remove PDF password* action is replaced.
 

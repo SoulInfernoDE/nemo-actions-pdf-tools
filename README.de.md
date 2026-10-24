@@ -117,35 +117,24 @@ pdf-tools update --auto off
 
 Der erste Befehl prüft und installiert sofort; der zweite schaltet die automatische Prüfung ab (`--auto on` schaltet sie wieder ein).
 
-## Voraussetzungen
+## Installation
 
-Unter Linux Mint 22 vorinstalliert:
+Eine Zeile installiert alles, auch noch fehlende Systempakete (fragt einmal nach deinem Passwort), und beendet Nemo, damit es beim nächsten Öffnen das neue Menü zeigt:
+
+```bash
+sudo apt install -y git && git clone https://github.com/SoulInfernoDE/nemo-actions-pdf-tools.git && cd nemo-actions-pdf-tools && ./install.sh && nemo -q
+```
+
+`install.sh` prüft diese Pakete und installiert fehlende mit apt; die meisten sind unter Linux Mint 22 vorinstalliert:
 
 - `nemo-python` (das Untermenü)
 - `python3-pikepdf` (PDF-Verarbeitung, basiert auf qpdf)
 - `python3-pil`, `python3-numpy` (Bildverarbeitung)
 - `python3-img2pdf` (Bilder zu PDF)
-- `gir1.2-poppler-0.18` (Vorschauen, visuelle Prüfung, Seitenexport)
-- `python3-gi` mit GTK 3
-- `gettext` (nur für den Installer, um die Übersetzungen zu erzeugen)
+- `gir1.2-poppler-0.18`, `python3-gi`, `python3-gi-cairo`, `python3-cairo`, `gir1.2-gtk-3.0` (Fenster, Vorschauen, visuelle Prüfung, Seitenexport)
+- `gettext` (erzeugt die Übersetzungen), `libnotify-bin` (Benachrichtigungen)
 
-Fehlende Pakete nennt der Installer.
-
-## Installation
-
-```bash
-git clone https://github.com/SoulInfernoDE/nemo-actions-pdf-tools.git
-```
-
-```bash
-cd nemo-actions-pdf-tools && ./install.sh
-```
-
-Danach Nemo einmal neu starten:
-
-```bash
-nemo -q
-```
+Ohne apt (andere Distributionen) die entsprechenden Pakete selbst installieren und `./install.sh --no-deps` ausführen; der Installer meldet dann nur noch, was fehlt.
 
 Alles wird nur für den aktuellen Benutzer installiert: das Programm nach `~/.local/share/nemo-pdf-tools/`, die Menü-Erweiterung nach `~/.local/share/nemo-python/extensions/`, die Übersetzungen nach `~/.local/share/locale/` der Befehl `pdf-tools` nach `~/.local/bin/` und seine Tab-Vervollständigung nach `~/.local/share/bash-completion/completions/`. Eine vorher installierte, eigenständige Aktion *PDF-Passwort entfernen* wird ersetzt.
 
